@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,49 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="convert" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_convert" translatesAutoresizingMaskIntoConstraints="NO" id="fmG-ry-yjW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="tintColor" red="0.98180383443832397" green="0.88400751352310181" blue="0.47441703081130981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-va-bKR">
+                                <rect key="frame" x="192.5" y="176" width="157.5" height="57.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
+                                <color key="textColor" red="0.060218794300000003" green="0.063980802650000002" blue="0.067992544419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="convert_logo" translatesAutoresizingMaskIntoConstraints="NO" id="cqI-W5-IJI">
+                                <rect key="frame" x="167" y="66" width="80" height="80"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fmG-ry-yjW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AU5-Zf-Aqw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g1h-va-bKR" secondAttribute="trailing" constant="64" id="AcX-hP-Ma3"/>
+                            <constraint firstItem="g1h-va-bKR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="LHW-X0-HJA"/>
+                            <constraint firstItem="cqI-W5-IJI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NRt-wB-tRc"/>
+                            <constraint firstItem="cqI-W5-IJI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="ewB-6Z-pLx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cqI-W5-IJI" secondAttribute="trailing" constant="157" id="gw2-J3-fgA"/>
+                            <constraint firstItem="cqI-W5-IJI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="irq-Bw-j4N"/>
+                            <constraint firstItem="fmG-ry-yjW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nS6-GQ-hSJ"/>
+                            <constraint firstAttribute="trailing" secondItem="fmG-ry-yjW" secondAttribute="trailing" id="sB4-od-xJO"/>
+                            <constraint firstAttribute="bottom" secondItem="fmG-ry-yjW" secondAttribute="bottom" id="uwK-2i-GjR"/>
+                            <constraint firstItem="g1h-va-bKR" firstAttribute="top" secondItem="cqI-W5-IJI" secondAttribute="bottom" constant="8" id="zeV-8T-qoT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background_convert" width="2048" height="2732"/>
+        <image name="convert_logo" width="210" height="268"/>
+    </resources>
 </document>
